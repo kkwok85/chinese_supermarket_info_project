@@ -10,6 +10,54 @@ pyautogui.mouseInfo()
 
 
 
+x_coordinates = [412, 532, 592, 772, 832,892,  952  ]
+supermarket_names = ['CT_supermarkets__11_14_2022', 'Hua_Lian_supermarket_11_14_2022', 'HL_supermarket_11_14_2022', 'SF_supermarket_11_14_2022', 'SkyFoods', 'Hong_Kong_Supermarket', 'Nature_farm_supermarket']
+for i in range(3):
+    print(x_coordinates[i])
+    # the small icon
+    pyautogui.click(x=x_coordinates[i], y=112, duration=0.1)
+    time.sleep(3)
+    # click to see the post
+    pyautogui.click(x=898, y=586, duration=0.1)
+    time.sleep(8)
+    # click on the discount image so that I can do control + save
+    pyautogui.click(x=898, y=586, duration=1)
+    time.sleep(8)
+    pyautogui.hotkey('ctrl', 's')
+
+    pyautogui.write(supermarket_names[i])
+    time.sleep(2)
+
+    # save button
+    pyautogui.click(x=1248, y=787, duration=0.1)
+
+    pyautogui.hotkey('alt', 'f4')
+    pyautogui.hotkey('alt', 'f4')
+    pyautogui.hotkey('alt', 'f4')
+
+
+
+
+# the small icon
+pyautogui.click(x=412, y=112, duration=0.1)
+time.sleep(3)
+# click to see the post
+pyautogui.click(x=898, y=586, duration=0.1)
+time.sleep(3)
+# click on the discount image so that I can do control + save
+pyautogui.click(x=898, y=586, duration=0.1)
+time.sleep(3)
+pyautogui.hotkey('ctrl', 's')
+#pyautogui.click(x=900, y=596, duration=0.1)
+
+pyautogui.write('SF_Supermarket_11_14_2022')
+time.sleep(2)
+
+pyautogui.click(x=1248, y=787, duration=0.1)
+
+
+
+
 
 # the msmall icon
 pyautogui.click(x=689, y=126, duration=0.1)
