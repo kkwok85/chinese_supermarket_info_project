@@ -15,6 +15,7 @@ def getdata(url):
 
 
 htmldata = getdata("http://feilongmarket.com/images/") 
+htmldata = getdata("http://feilongmarket.com/images/") 
 
 soup = BeautifulSoup(htmldata, 'lxml') 
 
@@ -29,9 +30,58 @@ for link in soup.find_all('a'):
 link_p1 = "http://feilongmarket.com/images/"
 
     
-urllib.request.urlretrieve(link_p1 + link_p2, "local-filename_test.jpg")
+urllib.request.urlretrieve(link_p1 + link_p2, "local-filename_test.gif")
 
-urllib.request.urlretrieve("http://feilongmarket.com/images/u12.gif", "local-filename_test.jpg")
+urllib.request.urlretrieve("http://feilongmarket.com/images/u12.gif", "local-filename_test.gif")
 
 
 
+
+
+
+
+
+
+htmldata = getdata("https://www.gw-supermarket.com/deal/") 
+
+soup = BeautifulSoup(htmldata, 'lxml') 
+
+
+sidebar = soup.find('div', class_='with-sidebar-wrapper')
+img = sidebar.find_all('img')
+
+
+link[-1]
+for link in soup.find_all('a'):
+    link_p2 = link.get('href')
+
+link_p1 = "http://feilongmarket.com/images/"
+
+    
+urllib.request.urlretrieve(link_p1 + link_p2, "local-filename_test.gif")
+
+urllib.request.urlretrieve("http://feilongmarket.com/images/u12.gif", "local-filename_test.gif")
+
+
+
+
+
+htmldata = getdata("https://www.hmart.com/weekly-sales-and-events/new-york-new-jersey/") 
+
+soup = BeautifulSoup(htmldata, 'lxml') 
+
+
+sidebar = soup.find('div', class_='img-wrapper')
+img = sidebar.find_all('img')
+
+
+link[-1]
+for link in soup.find_all('a'):
+    link_p2 = link.get('href')
+
+link_p1 = "http://feilongmarket.com/images/"
+
+    
+urllib.request.urlretrieve(link_p1 + link_p2, "local-filename_test.gif")
+
+urllib.request.urlretrieve("http://feilongmarket.com/images/u12.gif", "local-filename_test.gif")
