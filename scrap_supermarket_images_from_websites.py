@@ -81,3 +81,41 @@ for link in soup.find_all("div", class_ = "service-box style-1"):
 urllib.request.urlretrieve(link_result[0], "ifresh.jpg")
 
 
+
+# scrap littleneck supermarket data
+htmldata = getdata("https://littlenecksupermarket.com/") 
+
+soup = BeautifulSoup(htmldata, 'lxml') 
+
+
+link_result = []
+
+# find all links
+for link in soup.find_all("div", class_ = "elementor-widget-container"):
+    for img in link.find_all("img", src=True):  # searching for img with src attribute
+        link_result.append(img["src"])
+
+urllib.request.urlretrieve(link_result[0], "little_neck.jpg")
+
+
+
+
+
+
+
+
+# scrap new age market data
+htmldata = getdata("https://www.facebook.com/newagemarketplace") 
+
+soup = BeautifulSoup(htmldata, 'lxml') 
+
+
+link_result = []
+
+# find all links
+for link in soup.find_all("div", class_ = "elementor-widget-container"):
+    for img in link.find_all("img", src=True):  # searching for img with src attribute
+        link_result.append(img["src"])
+
+urllib.request.urlretrieve(link_result[0], "little_neck.jpg")
+
