@@ -107,15 +107,31 @@ urllib.request.urlretrieve(link_result[0], "little_neck.jpg")
 # scrap new age market data
 htmldata = getdata("https://www.facebook.com/newagemarketplace") 
 
+# facebook is hard to scrap. Do it by hand first.
+
+# https://www.facebook.com/newagemarketplace
+#https://www.facebook.com/superflmart/
+
+
+
+
+# scrap 99 ranch supermarket data
+htmldata = getdata("https://www.99ranch.com/store-advertisement") 
+
 soup = BeautifulSoup(htmldata, 'lxml') 
 
 
 link_result = []
 
 # find all links
-for link in soup.find_all("div", class_ = "elementor-widget-container"):
-    for img in link.find_all("img", src=True):  # searching for img with src attribute
+for link in soup.find_all("div", class_ = "slick-track"):
+    for img in link.find_all("sa-image-img", src=True):  # searching for img with src attribute
         link_result.append(img["src"])
 
-urllib.request.urlretrieve(link_result[0], "little_neck.jpg")
+urllib.request.urlretrieve(link_result[0], "")
 
+
+for link in soup.find_all('a'):
+    link_p2 = link.get('href')
+
+soup.find_all('img')
