@@ -5,9 +5,10 @@
     <meta name="keywords" content="Don&amp;apos;t&nbsp; Speak, Because So Much Is Riding On&nbsp;Your Design">
     <meta name="description" content="">
     <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}" media="screen">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     
     <script class="u-script" type="text/javascript" src="{{ url_for('static',filename='jquery.js') }}" defer=""></script>
@@ -62,19 +63,21 @@
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="3744" data-image-height="4481" id="sec-afef">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-default u-title u-text-1">毎周特價</h1>
+               <!--   
 
-        <div class="two-col">
-          <div class="col1 search-box">
-              <i class="bx bx-search"></i>
-              <input type="text" placeholder="Search a movie">
+        <div class="container">
+          <div class="two-col">
+            <div class="col1 search-box">
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search a movie">
+            </div>
+            <div class="col2 search-box">
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search a movie">
+            </div>
           </div>
-      
-          <div class="col2 search-box">
-              <i class="bx bx-search"></i>
-              <input type="text" placeholder="Search a movie">
-          </div>
-        </div>
-
+        </div>-->
+    
         <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div>
     </section>
@@ -91,6 +94,33 @@
         </div>
       -->
 
+      <div class="container">
+        <div class="search-box">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search a movie">
+        </div>
+
+        <div class="images">
+            <div class="image-box" data-name="spiderman">
+                <img src="{{ url_for('static',filename='images/shop3.jpg') }}" alt="">
+                <h6>spiderman</h6>
+            </div>
+            <div class="image-box" data-name="joker">
+              <img src="{{ url_for('static',filename='images/shop2.jpg') }}" alt="">
+              <h6>joker</h6>
+            </div>
+            <div class="image-box" data-name="ironman">
+              <img src="{{ url_for('static',filename='images/shop2.jpg') }}" alt="">
+              <h6>ironman</h6>
+            </div>
+
+            </div>
+        </div>
+ 
+
+      </div>
+      <script src="{{ url_for('static',filename='/search_box.js') }}"></script>
+
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
           <div class="u-gallery-inner u-gallery-inner-1">
             <div class="u-effect-fade u-gallery-item">
@@ -103,6 +133,16 @@
               </div>
             </div>
             <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide image-box" data-name = "passenger">
+                <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+
+            <div class="u-effect-fade u-gallery-item">
               <div class="u-back-slide">
                 <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
               </div>
@@ -111,6 +151,7 @@
                 <p class="u-gallery-text"></p>
               </div>
             </div>
+
             <div class="u-effect-fade u-gallery-item">
               <div class="u-back-slide">
                 <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop3.jpg') }}">
