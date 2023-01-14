@@ -80,6 +80,55 @@
             </div>
           </div>
         </div>
+
+
+
+        <div class="container">
+          <div class="two-col">
+            <div class = "col1">
+                      <select name="Cars" id="carSelector1">
+                        <option disabled selected value="default">Choose a car</option>
+                        <optgroup label="SUV">
+                            <option value="1">Toyota Fortuner</option>
+                            <option value="2">Toyota Rush</option>
+                            <option value="3">Nissan Terra</option>
+                            <option value="4">Mitsubishi Montero Sport</option>
+                            <option value="5">KIA Stonic</option>
+                        </optgroup>
+                        <optgroup label="COUPE">
+                            <option value="6">Ford Mustang</option>
+                            <option value="7">Nissan GT-R</option>
+                            <option value="8">Lamborghini Aventador</option>
+                        </optgroup>
+
+                      </select>
+                      <input type="submit" onclick="updateCarImage1()">
+
+
+            </div>
+
+            <div class="col2">
+                      <select name="Cars" id="carSelector2">
+                        <option disabled selected value="default">Choose a car</option>
+                        <optgroup label="SUV">
+                            <option value="1">Toyota Fortuner</option>
+                            <option value="2">Toyota Rush</option>
+                            <option value="3">Nissan Terra</option>
+                            <option value="4">Mitsubishi Montero Sport</option>
+                            <option value="5">KIA Stonic</option>
+                        </optgroup>
+                        <optgroup label="COUPE">
+                            <option value="6">Ford Mustang</option>
+                            <option value="7">Nissan GT-R</option>
+                            <option value="8">Lamborghini Aventador</option>
+                        </optgroup>
+
+                      </select>
+                      <input type="submit" onclick="updateCarImage2()">
+
+            </div>
+          </div>
+        </div>
     
         <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div>
@@ -95,24 +144,53 @@
 
           
       <div class="container">
+
+
+
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, '看所有特價點這里')" id="defaultOpen">看所有特價點這里</button>
+          <button class="tablinks" onclick="openCity(event, '比較特價')">比較特價</button>
+        </div>
+        
+        <!-- Tab content -->
+        <div id="看所有特價點這里" class="tabcontent">
+          <h3>看所有特價點這里</h3>
+          <p>看所有特價點這里</p>
+        </div>
+        
+        <div id="比較特價" class="tabcontent">
+          <div class="two-col">
+            <div class = "col1">
+              <!--
+              <img src="{{ url_for('static',filename='images/shop2.jpg') }}" width="400" 
+              height="500">-->
+              <div id="carsId" class="imageContainer">
+                <img id="carImage1" width="400" 
+                height="500">
+              </div>
+            </div>
+
+            <div class = "col2">
+              <div id="carsId" class="imageContainer">
+                <img id="carImage2" width="400" 
+                height="500">
+              </div>
+
+  
+            </div>
+          </div>
+        </div>
+        
+
+
+
         <!--
 
         <div class="search-box">
             <i class="bx bx-search"></i>
             <input type="text" placeholder="Search a movie">
         </div>-->
-        <div class="two-col">
-          <div class = "col1">
-            <img src="{{ url_for('static',filename='images/shop2.jpg') }}" width="400" 
-            height="500">
 
-          </div>
-          <div class = "col2">
-            <img src="{{ url_for('static',filename='images/shop3.jpg') }}" width="400" 
-            height="500">
-
-          </div>
-        </div>
 
 
 
