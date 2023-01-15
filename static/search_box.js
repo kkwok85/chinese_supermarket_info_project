@@ -1,4 +1,4 @@
- const search = document.querySelector(".two-col .col1 .search-box input"),
+ const search = document.querySelector(".col1 .search-box input"),
       images = document.querySelectorAll(".image-box");
 
 search.addEventListener("keyup", e =>{
@@ -18,7 +18,7 @@ search.addEventListener("keyup", () =>{
     if(search.value != "") return;
 
     images.forEach(image =>{
-        image.style.display = "none";
+        image.style.display = "block";
     })
 })
  
