@@ -63,70 +63,86 @@
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="3744" data-image-height="4481" id="sec-afef">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-default u-title u-text-1">毎周特價</h1>
-               
 
-        <div class="container">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, '看所有特價點這里')" id="defaultOpen">看所有特價點這里</button>
+          <button class="tablinks" onclick="openCity(event, '比較特價')">比較特價</button>
+        </div>
+        
+
+        <!-- Tab content -->
+        <div id="看所有特價點這里" class="tabcontent">
+          <div class="container">
             <div class = "col1">
               <div class="search-box">
                   <i class="bx bx-search"></i>
                   <input type="text" placeholder="Search a movie">
               </div>
             </div>
+  
+          </div>
+
+
 
         </div>
+        
+        <div id="比較特價" class="tabcontent">
 
 
-
-        <div class="container">
-          <div class="two-col">
-            <div class = "col1">
-                      <select name="Cars" id="carSelector1">
-                        <option disabled selected value="default">Choose a car</option>
-                        <optgroup label="SUV">
-                            <option value="1">Toyota Fortuner</option>
-                            <option value="2">Toyota Rush</option>
-                            <option value="3">Nissan Terra</option>
-                            <option value="4">Mitsubishi Montero Sport</option>
-                            <option value="5">KIA Stonic</option>
-                        </optgroup>
-                        <optgroup label="COUPE">
-                            <option value="6">Ford Mustang</option>
-                            <option value="7">Nissan GT-R</option>
-                            <option value="8">Lamborghini Aventador</option>
-                        </optgroup>
-
-                      </select>
-                      <input type="submit" onclick="updateCarImage1()">
-
-
-            </div>
-
-            <div class="col2">
-                      <select name="Cars" id="carSelector2">
-                        <option disabled selected value="default">Choose a car</option>
-                        <optgroup label="SUV">
-                            <option value="1">Toyota Fortuner</option>
-                            <option value="2">Toyota Rush</option>
-                            <option value="3">Nissan Terra</option>
-                            <option value="4">Mitsubishi Montero Sport</option>
-                            <option value="5">KIA Stonic</option>
-                        </optgroup>
-                        <optgroup label="COUPE">
-                            <option value="6">Ford Mustang</option>
-                            <option value="7">Nissan GT-R</option>
-                            <option value="8">Lamborghini Aventador</option>
-                        </optgroup>
-
-                      </select>
-                      <input type="submit" onclick="updateCarImage2()">
-
+          <div class="container">
+            <div class="two-col">
+              <div class = "col1">
+                        <select name="Cars" id="carSelector1">
+                          <option disabled selected value="default">Choose a car</option>
+                          <optgroup label="SUV">
+                              <option value="1">Toyota Fortuner</option>
+                              <option value="2">Toyota Rush</option>
+                              <option value="3">Nissan Terra</option>
+                              <option value="4">Mitsubishi Montero Sport</option>
+                              <option value="5">KIA Stonic</option>
+                          </optgroup>
+                          <optgroup label="COUPE">
+                              <option value="6">Ford Mustang</option>
+                              <option value="7">Nissan GT-R</option>
+                              <option value="8">Lamborghini Aventador</option>
+                          </optgroup>
+  
+                        </select>
+                        <input type="submit" onclick="updateCarImage1()">
+  
+  
+              </div>
+  
+              <div class="col2">
+                        <select name="Cars" id="carSelector2">
+                          <option disabled selected value="default">Choose a car</option>
+                          <optgroup label="SUV">
+                              <option value="1">Toyota Fortuner</option>
+                              <option value="2">Toyota Rush</option>
+                              <option value="3">Nissan Terra</option>
+                              <option value="4">Mitsubishi Montero Sport</option>
+                              <option value="5">KIA Stonic</option>
+                          </optgroup>
+                          <optgroup label="COUPE">
+                              <option value="6">Ford Mustang</option>
+                              <option value="7">Nissan GT-R</option>
+                              <option value="8">Lamborghini Aventador</option>
+                          </optgroup>
+  
+                        </select>
+                        <input type="submit" onclick="updateCarImage2()">
+  
+              </div>
+              
             </div>
           </div>
+
         </div>
+
     
-        <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div>
     </section>
+
     <section class="u-align-center u-clearfix u-section-2" id="sec-eccd">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Sample Headline</h2>
@@ -139,93 +155,57 @@
           
       <div class="container">
 
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+          <div class="u-gallery-inner u-gallery-inner-1">
 
-
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, '看所有特價點這里')" id="defaultOpen">看所有特價點這里</button>
-          <button class="tablinks" onclick="openCity(event, '比較特價')">比較特價</button>
-        </div>
-        
-        <!-- Tab content -->
-        <div id="看所有特價點這里" class="tabcontent">
-          <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
-            <div class="u-gallery-inner u-gallery-inner-1">
-  
-              <div class="u-effect-fade u-gallery-item">
-                <div class="u-back-slide image-box" data-name="shop2">
-                  <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
-                </div>
-                <div class="u-over-slide u-shading u-over-slide-2">
-                  <h3 class="u-gallery-heading"></h3>
-                  <p class="u-gallery-text"></p>
-                </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide image-box" data-name="shop2">
+                <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
               </div>
-  
-              <div class="u-effect-fade u-gallery-item">
-                <div class="u-back-slide image-box" data-name="shop3">
-                  <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop3.jpg') }}">
-                </div>
-                <div class="u-over-slide u-shading u-over-slide-3">
-                  <h3 class="u-gallery-heading"></h3>
-                  <p class="u-gallery-text"></p>
-                </div>
-              </div>
-
-              <div class="u-effect-fade u-gallery-item">
-                <div class="u-back-slide image-box" data-name="shop2">
-                  <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
-                </div>
-                <div class="u-over-slide u-shading u-over-slide-3">
-                  <h3 class="u-gallery-heading"></h3>
-                  <p class="u-gallery-text"></p>
-                </div>
-              </div>
-
-
-              <div class="u-effect-fade u-gallery-item">
-                <div class="u-back-slide image-box" data-name="shop3">
-                  <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop3.jpg') }}">
-                </div>
-                <div class="u-over-slide u-shading u-over-slide-3">
-                  <h3 class="u-gallery-heading"></h3>
-                  <p class="u-gallery-text"></p>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-
-
-
-
-
-
-
-        </div>
-        
-        <div id="比較特價" class="tabcontent">
-          <div class="two-col">
-            <div class = "col1">
-              <!--
-              <img src="{{ url_for('static',filename='images/shop2.jpg') }}" width="400" 
-              height="500">-->
-              <div id="carsId" class="imageContainer">
-                <img id="carImage1" width="400" 
-                height="500">
+              <div class="u-over-slide u-shading u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
               </div>
             </div>
 
-            <div class = "col2">
-              <div id="carsId" class="imageContainer">
-                <img id="carImage2" width="400" 
-                height="500">
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide image-box" data-name="shop3">
+                <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop3.jpg') }}">
               </div>
-
-  
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
             </div>
+
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide image-box" data-name="shop2">
+                <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop2.jpg') }}">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+
+
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide image-box" data-name="shop3">
+                <img class="u-back-image u-expanded" src="{{ url_for('static',filename='images/shop3.jpg') }}">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+
+
           </div>
         </div>
+
+
+
+
         
 
 
