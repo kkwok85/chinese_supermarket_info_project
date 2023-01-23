@@ -89,3 +89,8 @@ function updateCarImage2() {
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event
+
+
+
+
+

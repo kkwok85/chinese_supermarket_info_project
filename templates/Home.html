@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}" media="screen">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     
     <script class="u-script" type="text/javascript" src="{{ url_for('static',filename='jquery.js') }}" defer=""></script>
@@ -72,15 +75,31 @@
 
         <!-- Tab content -->
         <div id="看所有特價點這里" class="tabcontent">
+          <div class="wrapper">
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <input type="text" placeholder="Type to search..">
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+          </div>
+
+
+
+
+          <!--
           <div class="container">
             <div class = "col1">
               <div class="search-box">
-                  <i class="bx bx-search"></i>
-                  <input type="text" placeholder="Search a movie">
+                <i class="bx bx-search"></i><input type="text" placeholder="Search a movie">
+                  
+
               </div>
             </div>
   
-          </div>
+          </div>-->
 
 
 
@@ -241,6 +260,10 @@
       </div>
 
       <script src="{{ url_for('static',filename='/search_box.js') }}"></script>
+      <script src="{{ url_for('static',filename='/suggestions.js') }}"></script>
+      <script src="{{ url_for('static',filename='/script.js') }}"></script>
+
+
 
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
           <div class="u-gallery-inner u-gallery-inner-1">
